@@ -1,0 +1,33 @@
+[gd_scene load_steps=7 format=3 uid="uid://jdvsshw2jdpf"]
+
+[ext_resource type="ArrayMesh" uid="uid://dsdsai5keumne" path="res://assets/tiles/grass.res" id="1_fiprn"]
+[ext_resource type="ArrayMesh" uid="uid://capm2fg3yei0u" path="res://assets/tiles/grass_corner.res" id="2_ux38w"]
+[ext_resource type="ArrayMesh" uid="uid://bgrtg4g2o2inj" path="res://assets/tiles/grass_corner_in.res" id="3_c84mi"]
+[ext_resource type="ArrayMesh" uid="uid://5og7hwyikfs4" path="res://assets/tiles/grass_forest.res" id="4_nb6du"]
+[ext_resource type="ArrayMesh" uid="uid://bcy6alkad80n4" path="res://assets/tiles/grass_house.res" id="5_tlyoy"]
+[ext_resource type="ArrayMesh" uid="uid://holnjh46wpbb" path="res://assets/tiles/grass_slope.res" id="6_lbrdl"]
+
+[node name="meshlib_tiles_source" type="Node3D"]
+
+[node name="Grass" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1)
+mesh = ExtResource("1_fiprn")
+
+[node name="GrassCorner" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 1)
+mesh = ExtResource("2_ux38w")
+
+[node name="GrassCornerIn" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 1)
+mesh = ExtResource("3_c84mi")
+
+[node name="GrassForest" type="MeshInstance3D" parent="."]
+mesh = ExtResource("4_nb6du")
+
+[node name="GrassHouse" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2)
+mesh = ExtResource("5_tlyoy")
+
+[node name="GrassSlope" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 2)
+mesh = ExtResource("6_lbrdl")
