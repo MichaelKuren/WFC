@@ -12,6 +12,9 @@ albedo_color = Color(0.913725, 0.454902, 0, 1)
 [node name="Spectator" type="CharacterBody3D"]
 script = ExtResource("1_al5t0")
 
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 2.98023e-08, 1, 0, -1, 2.98023e-08, 0, 0, 0)
+
 [node name="Body" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.299645, 0, 0, 0, 0.299645, 0, 0, 0, 0.299645, 0, 0, 0)
 mesh = SubResource("SphereMesh_m5y2q")
@@ -20,7 +23,3 @@ surface_material_override/0 = SubResource("StandardMaterial3D_aotga")
 [node name="Collision" type="CollisionShape3D" parent="."]
 transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0)
 shape = SubResource("SphereShape3D_5mvnf")
-
-[node name="CameraRoot" type="Marker3D" parent="."]
-
-[node name="Camera3D" type="Camera3D" parent="CameraRoot"]

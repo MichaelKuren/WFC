@@ -3,7 +3,7 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://s4qlo6vdkyx8"
+uid="uid://c8y1oifdkdu3y"
 path="res://.godot/imported/tiles.blend-09bbee2a7fe10a526cd48317b36fd522.scn"
 
 [deps]
@@ -37,7 +37,7 @@ _subresources={
 "lods/normal_merge_angle": 60.0,
 "lods/normal_split_angle": 25.0,
 "save_to_file/enabled": true,
-"save_to_file/make_streamable": "",
+"save_to_file/make_streamable": true,
 "save_to_file/path": "res://assets/tiles/grass_corner_in.res"
 },
 "tiles-09bbee2a7fe10a526cd48317b36fd522_grass": {
@@ -47,7 +47,7 @@ _subresources={
 "lods/normal_merge_angle": 60.0,
 "lods/normal_split_angle": 25.0,
 "save_to_file/enabled": true,
-"save_to_file/make_streamable": "",
+"save_to_file/make_streamable": true,
 "save_to_file/path": "res://assets/tiles/grass.res"
 },
 "tiles-09bbee2a7fe10a526cd48317b36fd522_grass_corner": {
@@ -57,7 +57,7 @@ _subresources={
 "lods/normal_merge_angle": 60.0,
 "lods/normal_split_angle": 25.0,
 "save_to_file/enabled": true,
-"save_to_file/make_streamable": "",
+"save_to_file/make_streamable": true,
 "save_to_file/path": "res://assets/tiles/grass_corner.res"
 },
 "tiles-09bbee2a7fe10a526cd48317b36fd522_grass_forest": {
@@ -67,7 +67,7 @@ _subresources={
 "lods/normal_merge_angle": 60.0,
 "lods/normal_split_angle": 25.0,
 "save_to_file/enabled": true,
-"save_to_file/make_streamable": "",
+"save_to_file/make_streamable": true,
 "save_to_file/path": "res://assets/tiles/grass_forest.res"
 },
 "tiles-09bbee2a7fe10a526cd48317b36fd522_grass_house": {
@@ -77,7 +77,7 @@ _subresources={
 "lods/normal_merge_angle": 60.0,
 "lods/normal_split_angle": 25.0,
 "save_to_file/enabled": true,
-"save_to_file/make_streamable": "",
+"save_to_file/make_streamable": true,
 "save_to_file/path": "res://assets/tiles/grass_house.res"
 },
 "tiles-09bbee2a7fe10a526cd48317b36fd522_grass_slope": {
@@ -87,7 +87,7 @@ _subresources={
 "lods/normal_merge_angle": 60.0,
 "lods/normal_split_angle": 25.0,
 "save_to_file/enabled": true,
-"save_to_file/make_streamable": "",
+"save_to_file/make_streamable": true,
 "save_to_file/path": "res://assets/tiles/grass_slope.res"
 }
 }
