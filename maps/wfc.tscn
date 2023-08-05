@@ -32,24 +32,29 @@ shader_parameter/vignette_intensity = 0.4
 shader_parameter/vignette_opacity = 0.136
 shader_parameter/vignette_rgb = Color(0, 0, 0, 1)
 
-[sub_resource type="LabelSettings" id="LabelSettings_72ki0"]
-font_size = 15
-
-[sub_resource type="LabelSettings" id="LabelSettings_rckx2"]
+[sub_resource type="LabelSettings" id="LabelSettings_jpbrj"]
 font_size = 20
+
+[sub_resource type="LabelSettings" id="LabelSettings_lp51l"]
+font_size = 26
 
 [node name="WFC" type="Node3D"]
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 9.14543, -2.29295e-07)
+transform = Transform3D(1, 0, 0, 0, -0.278991, 0.960294, 0, -0.960294, -0.278991, 0, 8.46847, -2.29295e-07)
 light_color = Color(0.929412, 0.803922, 0.819608, 1)
+shadow_enabled = true
+shadow_opacity = 0.65
+shadow_blur = 0.861
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_ufhj5")
 
-[node name="WFCGenerator" type="Node3D" parent="."]
+[node name="WFCGenerator" type="Node3D" parent="." node_paths=PackedStringArray("message_collapsed", "message_start")]
 script = ExtResource("1_ryv81")
 size = Vector2i(20, 20)
+message_collapsed = NodePath("../Collapsed")
+message_start = NodePath("../Start")
 
 [node name="Spectator" parent="." instance=ExtResource("3_6ff54")]
 transform = Transform3D(1, 0, 4.25189e-07, 0, 1, 0, -4.25189e-07, 0, 1, 0, 9.89491, 0)
@@ -65,38 +70,35 @@ grow_vertical = 2
 [node name="menu" parent="." node_paths=PackedStringArray("wfc") instance=ExtResource("4_235j2")]
 wfc = NodePath("../WFCGenerator")
 
-[node name="Keys" type="Label" parent="."]
-offset_left = 15.0
-offset_top = 15.0
-offset_right = 209.0
-offset_bottom = 90.0
-text = "Enter - Regenerate
-Tab - Show Mouse Cursor
-Esc - Quit"
-label_settings = SubResource("LabelSettings_72ki0")
-
-[node name="MovementKeys" type="Label" parent="."]
-anchors_preset = 2
-anchor_top = 1.0
-anchor_bottom = 1.0
-offset_left = 14.0
-offset_top = -90.0
-offset_right = 211.0
-offset_bottom = -15.0
-grow_vertical = 0
-text = "WASD - Movement
-Space / Shift - Up / Down
-Mouse X/Y - Turn X/Y"
-label_settings = SubResource("LabelSettings_72ki0")
-
-[node name="Title" type="Label" parent="."]
-anchors_preset = 5
+[node name="Collapsed" type="Label" parent="."]
+visible = false
+anchors_preset = 7
 anchor_left = 0.5
+anchor_top = 1.0
 anchor_right = 0.5
-offset_left = -114.5
-offset_right = 114.5
-offset_bottom = 31.0
+anchor_bottom = 1.0
+offset_left = -47.0
+offset_top = -45.0
+offset_right = 53.0
+offset_bottom = -14.0
 grow_horizontal = 2
-text = "Wave Function Collapse"
-label_settings = SubResource("LabelSettings_rckx2")
+grow_vertical = 0
+text = "Collapsed!"
+label_settings = SubResource("LabelSettings_jpbrj")
+horizontal_alignment = 1
+
+[node name="Start" type="Label" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -146.0
+offset_top = -19.5
+offset_right = 146.0
+offset_bottom = 19.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Press Enter to collapse!"
+label_settings = SubResource("LabelSettings_lp51l")
 horizontal_alignment = 1

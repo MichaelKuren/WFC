@@ -7,8 +7,6 @@ extends Control
 func _ready() -> void:
 	$MenuBox/LabelX.text = String.num(wfc.size.x)
 	$MenuBox/LabelY.text = String.num(wfc.size.y)
-	$MenuBox/X.value = wfc.size.x
-	$MenuBox/Y.value = wfc.size.y
 
 func _on_x_value_changed(value: float) -> void:
 	wfc.size.x = value
